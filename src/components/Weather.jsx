@@ -103,7 +103,7 @@ const Weather = () => {
     marginBottom: '10px',
   }}
 >
-  {weatherData.temprature}
+  {weatherData.temprature} ℃ 
 </p>
           <p className='location'>{weatherData.location}</p>
           <div className="weather-data">

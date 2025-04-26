@@ -1,156 +1,173 @@
 .weather {
     place-self: center;
     padding: 40px;
-    border-radius: 10px;
-    background-image: linear-gradient(45deg, #2f4680, #500ae4);
+    border-radius: 15px; /* Slightly more rounded corners */
+    background-color: rgba(30, 30, 30, 0.8); /* Dark background with some transparency for glassmorphism */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added a subtle shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth */
+    color: #e0f7fa; /* Light, cool text color */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for the glass effect */
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 12px;
-    width: 100%; /* Make search bar take full width */
-    margin-bottom: 20px; /* Add some space below the search bar */
+    gap: 15px; /* Slightly increased gap */
+    width: 100%;
+    margin-bottom: 25px; /* Slightly increased margin */
 }
 
 .search-bar input {
-    height: 50px;
-    border: none;
+    height: 45px; /* Slightly reduced height */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
     outline: none;
-    border-radius: 40px;
-    padding-left: 25px;
-    padding-right: 15px; /* Add some right padding for better visual balance */
-    color: #626262;
-    background: #ebfffc;
-    font-size: 18px;
-    flex-grow: 1; /* Allow input to take up available space */
+    border-radius: 30px; /* More rounded */
+    padding-left: 20px; /* Adjusted padding */
+    padding-right: 15px;
+    color: #e0f7fa; /* Light text color */
+    background-color: rgba(50, 50, 50, 0.7); /* Darker, slightly transparent background */
+    font-size: 16px; /* Slightly smaller font */
+    flex-grow: 1;
+}
+
+.search-bar input::placeholder {
+    color: #b0bec5; /* Lighter placeholder text */
 }
 
 .search-bar input:focus {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Added focus style */
+    box-shadow: 0 0 8px #4dd0e1; /* Cool accent color for focus */
+    border-color: #4dd0e1;
 }
 
 .search-bar img {
-    width: 50px;
-    padding: 15px;
+    width: 45px; /* Slightly reduced size */
+    padding: 12px;
     border-radius: 50%;
-    background: #ebfffc;
+    background-color: #4dd0e1; /* Cool accent color for the button */
     cursor: pointer;
-    transition: transform 0.2s ease-in-out; /* Add transition for hover effect */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Added background transition */
 }
 
 .search-bar img:hover {
-    transform: scale(1.1); /* Subtle hover effect */
+    transform: scale(1.1);
+    background-color: #26c6da; /* Slightly darker shade on hover */
 }
 
 .weather-icon {
-    width: 150px;
-    margin: 30px 0;
+    width: 120px; /* Slightly smaller icon */
+    margin: 20px 0; /* Adjusted margin */
 }
 
-.temparature {
-    color: #fff;
-    font-size: 80px; /* Keep the large font size as the base */
+.temprature {
+    color: #4dd0e1; /* Cool accent color for temperature */
+    font-size: 70px; /* Slightly smaller */
     line-height: 1;
-    margin-bottom: 10px; /* Add some space below temperature */
+    margin-bottom: 5px; /* Reduced margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */
 }
 
 .location {
     color: #fff;
-    font-size: 40px;
-    text-align: center; /* Center the location text */
+    font-size: 32px; /* Slightly smaller */
+    text-align: center;
+    font-weight: 300; /* Lighter font weight */
 }
 
 .weather-data {
     width: 100%;
-    margin-top: 40px;
-    color: #fff;
+    margin-top: 30px; /* Adjusted margin */
+    color: #e0f7fa;
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Add some gap between the columns */
+    gap: 15px; /* Adjusted gap */
 }
 
 .weather-data .col {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 22px;
-    flex-direction: column; /* Stack icon and text on smaller screens */
-    align-items: center; /* Center items in column */
+    align-items: center; /* Align items horizontally */
+    gap: 10px;
+    font-size: 18px; /* Slightly smaller */
+    flex-direction: row; /* Arrange icon and text horizontally */
 }
 
 .weather-data .col span {
     display: block;
-    font-size: 16px;
-    text-align: center; /* Center the span text */
+    font-size: 14px;
+    text-align: left; /* Align span text to the left */
+    color: #b0bec5; /* Lighter color for the label */
 }
 
 .weather-data .col img {
-    width: 26px;
-    margin-bottom: 5px; /* Add some space below the icon */
+    width: 24px; /* Slightly smaller icon */
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .error-message {
-    color: #ffdddd;
-    background-color: #ffaaaa;
+    color: #ffcdd2; /* Light red */
+    background-color: #ef9a9a; /* Darker red */
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 15px; /* Adjusted margin */
     text-align: center;
 }
 
-/* Responsive Design */
+/* Responsive Design - Adjusted for the new styles */
 @media (max-width: 600px) {
     .weather {
-        padding: 20px;
+        padding: 25px;
+        border-radius: 10px;
     }
 
     .search-bar input {
-        height: 40px;
-        font-size: 16px;
+        height: 35px;
+        font-size: 14px;
         padding-left: 15px;
         padding-right: 10px;
+        border-radius: 25px;
     }
 
     .search-bar img {
-        width: 40px;
-        padding: 10px;
+        width: 35px;
+        padding: 8px;
     }
 
     .weather-icon {
-        width: 100px;
-        margin: 20px 0;
+        width: 90px;
+        margin: 15px 0;
     }
 
-    .temparature {
-        font-size: 60px; /* Make it smaller on smaller screens */
+    .temprature {
+        font-size: 50px;
     }
 
     .location {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .weather-data {
-        flex-direction: column; /* Stack weather data on smaller screens */
+        flex-direction: column;
         align-items: center;
         margin-top: 20px;
-        gap: 30px;
+        gap: 20px;
     }
 
     .weather-data .col {
-        font-size: 20px;
+        font-size: 16px;
+        flex-direction: column; /* Stack on smaller screens again */
+        align-items: center;
     }
 
     .weather-data .col span {
-        font-size: 14px;
+        font-size: 12px;
+        text-align: center;
     }
 
     .weather-data .col img {
-        margin-top: 0;
-        margin-bottom: 5px;
+        width: 20px;
+        margin-bottom: 3px;
     }
 }
