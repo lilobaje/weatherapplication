@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Weather.css';
-
 import search_icon from '../assets/search.png';
 import clear_icon from '../assets/clear.png';
 import cloud_icon from '../assets/cloud.png';
@@ -98,9 +97,9 @@ const Weather = () => {
   className='temprature'
   style={{
     color: '#fff',
-    fontSize: '80px',
+    fontSize: '40px',
     lineHeight: '1',
-    marginBottom: '10px',
+    marginBottom: '0px',
   }}
 >
   {weatherData.temprature} ℃ 

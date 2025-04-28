@@ -64,7 +64,7 @@
 
 .temprature {
     color: #4dd0e1; /* Cool accent color for temperature */
-    font-size: 70px; /* Slightly smaller */
+    font-size: 10px; /* Slightly smaller */
     line-height: 1;
     margin-bottom: 5px; /* Reduced margin */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */

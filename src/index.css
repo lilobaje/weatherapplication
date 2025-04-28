@@ -1,6 +1,6 @@
 body {
-    min-height: 100vh;
-    margin: 0; /* Reset default body margin */
+    min-height: 10vh;
+    margin: 0px; /* Reset default body margin */
     overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
